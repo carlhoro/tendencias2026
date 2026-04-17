@@ -11,7 +11,7 @@ class ItemPedido(db.Model):
     producto = db.Column(db.String(100), nullable=False)
     cantidad = db.Column(db.Integer, default=1)
     precio_base = db.Column(db.Float, nullable=False)
-    extras = db.Column(db.JSON, default=[])
+    extras = db.Column(db.JSON, default=list)
     precio_final = db.Column(db.Float)
 
     # -------------------------
@@ -48,4 +48,5 @@ class ItemBuilder:
             precio_base=self.precio_base,
             extras=self.extras,
             precio_final=precio_final
+        )
         )

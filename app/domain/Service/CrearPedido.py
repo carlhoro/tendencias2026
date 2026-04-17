@@ -27,7 +27,11 @@ def crear_pedido(data):
 
     pedido.total = total
 
-    db.session.add(pedido)
-    db.session.commit()
+    try:
+        db.session.add(pedido)
+        db.session.commit()
+    except Exception:
+        db.session.rollback()
+        raise
 
     return pedido

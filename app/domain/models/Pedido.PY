@@ -1,5 +1,3 @@
-# app/models/pedido.py
-
 from app.extensions import db
 
 class Pedido(db.Model):

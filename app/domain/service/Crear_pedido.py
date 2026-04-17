@@ -1,8 +1,8 @@
 # app/services/pedido_service.py
 
 from app.extensions import db
-from app.models.pedido import Pedido
-from app.models.item_pedido import ItemPedido
+from app.domain.models.Pedido import Pedido
+from app.domain.models.ItemPedido import ItemPedido
 
 def crear_pedido(data):
     pedido = Pedido(cliente_nombre=data["cliente"])

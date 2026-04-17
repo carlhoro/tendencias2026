@@ -12,7 +12,4 @@ def create_app():
     db.init_app(app)
     migrate.init_app(app, db)
 
-    from app.routes.pedido_routes import pedido_bp
-    app.register_blueprint(pedido_bp)
-
     return app
